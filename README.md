@@ -1,3 +1,53 @@
+# RoR-Hello-Frontend-Test
+
+Bu proje, Next.js ile geliştirilmiş bir frontend ve Cypress+Cucumber ile yazılmış uçtan uca testleri içerir. Backend olarak Ruby on Rails API (hello_app) ile entegre çalışır.
+
+
+## Özellikler
+- Kullanıcıları listeleme
+- Yeni gönderi oluşturma
+- Hatalı durumlar için uyarı mesajları
+- Cypress+Cucumber ile BDD tabanlı testler
+
+## Kurulum
+1. Depoyu klonlayın:
+	```bash
+	git clone https://github.com/mustafa-karakoyun/RoR-Hello-Frontend-Test.git
+	cd RoR-Hello-Frontend-Test
+	```
+2. Bağımlılıkları yükleyin:
+	```bash
+	npm install
+	```
+3. Next.js frontend’i başlatın:
+	```bash
+	npm run dev -- -p 3001
+	```
+4. Rails API’yi başlatın (ayrı terminalde):
+	```bash
+	bundle exec rails s
+	```
+
+## Testler
+- Cypress testlerini çalıştırmak için:
+  ```bash
+  npx cypress run
+  ```
+- Test videoları `cypress/videos` klasöründe saklanır.
+
+## Yapı
+- `app/` : Next.js frontend sayfaları
+- `cypress/e2e/features/` : Feature dosyaları ve step definitions
+- `.cypress-cucumber-preprocessorrc.json` : Cucumber step dosyası yolu
+- `cypress.config.ts` : Cypress ve Cucumber yapılandırması
+
+## Notlar
+- API adresi ve CORS ayarlarının doğru olduğundan emin olun.
+- Testler için hem frontend hem de backend sunucusu açık olmalıdır.
+
+---
+
+**Hazırlayan:** Mustafa Karakoyun
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
